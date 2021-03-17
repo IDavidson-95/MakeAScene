@@ -1,6 +1,6 @@
 #include "splashkit.h"
 
-void dream()
+void dream() // Procedure "Dream", first scene.
 {
     load_bitmap("background", "dreamBackground.jpg");
     load_bitmap("Dream", "jebDream.jpg");
@@ -14,7 +14,7 @@ void dream()
     play_sound_effect("Dream");
 }
 
-void plan()
+void plan() // Procedure "Plan", second scene.
 {
     load_bitmap("plan", "plan.jpg");
     load_sound_effect("plan", "plan.wav");
@@ -26,7 +26,7 @@ void plan()
     play_sound_effect("plan.wav");
 }
 
-void fail()
+void fail() // Procedure "fail", third scene.
 {
     load_bitmap("fail", "fail.jpg");
     load_sound_effect("fail", "fail.wav");
@@ -38,7 +38,7 @@ void fail()
     play_sound_effect("fail.wav");
 }
 
-void plan_again()
+void plan_again() // Procedure "plan again", fourth scene.
 {
     load_bitmap("planAgain", "planAgain.jpg");
     load_sound_effect("plan", "plan.wav");
@@ -50,7 +50,7 @@ void plan_again()
     play_sound_effect("plan.wav");
 }
 
-void succeed()
+void succeed() // Procedure "succeed", fifth scene.
 {
     load_bitmap("succeed", "succeed.png");
     load_sound_effect("succeed", "succeed.mp3");
@@ -59,10 +59,10 @@ void succeed()
     draw_bitmap("succeed", 0, 0);
     draw_text("SUCCEED", COLOR_WHITE, "Inspiring Font", 100, 200, 50);
     refresh_screen(60);
-    play_sound_effect("succeed");
+    play_sound_effect("succeed"); // Sound stays through to next scene.
 }
 
-void succeed2()
+void succeed2() // Procedure "succeed 2", final scene.
 {
     load_bitmap("succeed2", "succeed2.png");
     clear_screen(COLOR_WHITE);
@@ -72,7 +72,10 @@ void succeed2()
 
 int main()
 {
-    open_window("1.3C KSP", 800, 600);
+    open_window("1.3C KSP", 800, 600); // Creates a window 800 x 600
+    
+    // Runs above procedures with delays between to allow
+    // sounds to play.
     dream();
     delay(6000);
     plan();
