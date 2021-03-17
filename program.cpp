@@ -78,7 +78,7 @@ int main()
     plan();
     delay(5000);
     fail();
-    delay(5000);
+    delay(4000);
     plan_again();
     delay(5000);
     succeed();
