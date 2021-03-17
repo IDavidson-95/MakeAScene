@@ -9,7 +9,7 @@ void dream()
     clear_screen(COLOR_BLACK);
     draw_bitmap("dreamBackground.jpg", 0, 0);
     draw_bitmap("Dream", 250, 0);
-    draw_text("DREAM", COLOR_GRAY, "Inspiring Font", 100, 325, 100);
+    draw_text("DREAM", COLOR_WHITE, "Inspiring Font", 100, 325, 25);
     refresh_screen(60);
     play_sound_effect("Dream");
 }
